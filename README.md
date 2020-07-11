@@ -1,4 +1,4 @@
 # thinkbig-webdriverio
 
-Run the test:
+Run all tests:
 npm test
