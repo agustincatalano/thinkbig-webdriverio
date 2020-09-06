@@ -1,13 +1,22 @@
 
 class LogIn{
 
+ DASHBOARD_URL = 'https://thinkbig-stag.firebaseapp.com/#/dashboard'   
+
 get loginContainer() {return $('.login-container')}
 get usernameBox() {return $('#username')}
 get passwordBox() {return $('#password')}
 get loginButton() {return $('#loginBtn')}
+get loginButton() {return $('#loginBtn')}
+get errorContainer() {return $('.login-container .alert')}
 
 
 
+async errorContainerIsDisplayed(){
+    const errorContainer = await this.errorContainer
+    await browser.$$(errorContainer)
+
+}
 
 
 async login(username, password){
